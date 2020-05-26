@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Data</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar  navbar-expand-md navbar-dark bg-dark fixed-top    padding: 0px 0px;"> 
+
+    <image src="{{ url_for('static',filename='logo_dvalue3.png')}}" height="35" width="150"></image>
+  </div> 
+</nav>
+  <div class="container-fluid">
+  
+      <div class= "jumbotron jumbotron-fluid  text-center" style="margin-bottom: 0px;">
+
+  
+      <h1>Mission to Mars...</h1>
+  
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+      </div>
+        
+         <h1>Latest Mars News</h1>
+         <h2>{{ mars_d.news_title}}</h2>
+         <h4>{{ mars_d.news_p }}</h4>
+       
+
+
+         <div class= "jumbotron jumbotron-fluid" style="margin-bottom: 0px;">
+          <p> </p>
+           
+            <div class = "container">
+              
+              <div class="row">
+                
+                  <div class="col-md-6" > 
+                  
+                    
+                      <div  class = "rowstyle" > 
+                         <div class="text-left text-style font-italic  text-info">  
+                          <header> <h2>Feature Mars Image</h2> 
+                         </header></div>   
+                         <img src="{{mars_d.news_picf}}"  height="350" width="550" alt="Sloth">
+                                    
+                      </div> 
+                  </div>
+                  <div class=" center col-md-6"> 
+                    
+                      <div class = "rowstyle" >
+                        <div class="text-left text-style font-italic  text-info">  
+                          <header> <h2>Current Weather on Mars</h2> 
+                         </header></div> 
+                         <h5>News Weather {{mars_d.news_m_weather}}</h5>                      
+                           
+                           <table border="1" class="dataframe" >
+                            <thead>
+                              <tr style="text-align: center;">
+                              
+                                <th>Description</th>
+                                <th>Measure</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                
+                                <td>Equatorial Diameter:</td>
+                                <td>6,792 km</td>
+                              </tr>
+                              <tr>
+                               
+                                <td>Polar Diameter:</td>
+                                <td>6,752 km</td>
+                              </tr>
+                              <tr>
+                               
+                                <td>Mass:</td>
+                                <td>6.39  10^23 kg (0.11 Earths)</td>
+                              </tr>
+                              <tr>
+                              
+                                <td>Moons:</td>
+                                <td>2 (Phobos &amp; Deimos)</td>
+                              </tr>
+                              <tr>
+                              
+                                <td>Orbit Distance:</td>
+                                <td>227,943,824 km (1.38 AU)</td>
+                              </tr>
+                              <tr>
+                             
+                                <td>Orbit Period:</td>
+                                <td>687 days (1.9 years)</td>
+                              </tr>
+                              <tr>
+                              
+                                <td>Surface Temperature:</td>
+                                <td>-87 to -5 C</td>
+                              </tr>
+                              <tr>
+                              
+                                <td>First Record:</td>
+                                <td>2nd millennium BC</td>
+                              </tr>
+                              <tr>
+                               
+                                <td>Recorded By:</td>
+                                <td>Egyptian astronomers</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+          
+                          </div>
+                  </div>
+                  
+                </div>          
+              </div>
+          </div>
+
+
+          <div class = "container">
+              
+            <div class="row">
+              
+                <div class="col-md-6" > 
+                
+                  
+                    <div  class = "rowstyle" > 
+                       <div class="text-left text-style font-italic  text-info">  
+                        <header> <h2>{{ mars_d.news_tit0 }}</h2> 
+                       </header></div>      
+                       <img src="{{mars_d.news_img0 }}" height="350" width="400" alt="Sloth" class="img-fluid float-left">         
+                       
+                      </div> 
+
+                </div>
+
+
+                <div class="col-md-6" > 
+                
+                  
+                  <div  class = "rowstyle" > 
+                       <div class="text-left text-style font-italic  text-info">  
+                        <header> <h2>{{ mars_d.news_tit1 }}</h2> 
+                       </header></div>      
+                       <img src="{{mars_d.news_img1 }}" height="350" width="400" alt="Sloth" class="img-fluid float-left">         
+                       
+                  </div> 
+              </div>
+
+
+
+
+              <div class="col-md-6" > 
+                
+                  
+                <div  class = "rowstyle" > 
+                  <div class="text-left text-style font-italic  text-info">  
+                   <header> <h2>{{ mars_d.news_tit2 }}</h2> 
+                  </header></div>      
+                  <img src="{{mars_d.news_img2 }}" height="350" width="400" alt="Sloth" class="img-fluid float-left">         
+                  
+               </div> 
+
+            </div>
+
+
+            
+
+            <div class="col-md-6" > 
+                
+                  
+              <div  class = "rowstyle" > 
+                <div class="text-left text-style font-italic  text-info">  
+                 <header> <h3>{{ mars_d.news_tit3 }}</h3> 
+                </header></div>      
+                <img src="{{mars_d.news_img3 }}" height="350" width="400" alt="Sloth" class="img-fluid float-left">         
+                
+             </div> 
+          </div>
+
+
+
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
